@@ -11,6 +11,8 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
 
 public class PositionCategoriesUnderHuman {
 
@@ -21,6 +23,7 @@ public class PositionCategoriesUnderHuman {
 
     String positionName;
     String positionID;
+    String tenantId;
 
 
 
@@ -64,9 +67,10 @@ public class PositionCategoriesUnderHuman {
         Map<String,String>position=new HashMap<>();
 
         positionName=faker.name().fullName()+faker.number().digits(3);
+        tenantId=faker.number().digits(24);
         position.put("name",positionName);
         position.put("shortName",faker.name().firstName()+faker.number().digits(3));
-        position.put("tenantId",faker.number().digits(24));
+        position.put("tenantId",tenantId);
 
 
 
@@ -88,6 +92,38 @@ public class PositionCategoriesUnderHuman {
                 .statusCode(201)
                 .log().body()
                 .extract().path("id");
+
+
+    }
+
+    @Test(dependsOnMethods = "createPosition")
+    public void createPositionNegative(){
+
+        Map<String,String>positionNegatif=new HashMap<>();
+        positionNegatif.put("name",positionName);
+        positionNegatif.put("shortName",faker.name().firstName()+faker.number().digits(3));
+        positionNegatif.put("tenantId",tenantId);
+
+
+        given()
+                .spec(requestSpec)
+                .log().body()
+                .body(positionNegatif)
+
+
+                .when()
+
+                .post("/school-service/api/employee-position")
+
+
+                .then()
+                .log().body()
+                .statusCode(400)
+                .body("message",containsString("already exists"))
+
+                ;
+
+
 
 
     }

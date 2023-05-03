@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" afterDir="false" />
+    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="1-Create Login And Setup functions&#10;2- Create a Position Categoria">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.PositionCategoriesUnderHuman.createPositionNegative">
     <configuration name="PositionCategoriesUnderHuman.createPosition" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="InternShipRest" />
       <option name="PACKAGE_NAME" value="" />
@@ -57,8 +57,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PositionCategoriesUnderHuman.createPositionNegative" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="createPositionNegative" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPositionNegative" />
         <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPosition" />
       </list>
     </recent_temporary>
@@ -72,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1683038948871</updated>
     </task>
+    <task id="LOCAL-00001" summary="1-Create Login And Setup functions&#10;2- Create a Position Categoria">
+      <created>1683090113705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683090113705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,5 +105,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1-Create Login And Setup functions&#10;2- Create a Position Categoria" />
+    <option name="LAST_COMMIT_MESSAGE" value="1-Create Login And Setup functions&#10;2- Create a Position Categoria" />
   </component>
 </project>
