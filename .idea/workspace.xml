@@ -4,24 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="pom.xml güncellendi" />
+    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="5- Delete Position Categoria Test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2PF3LXc9zuDr4NdqqSFG0Y895Hv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,6 +44,76 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="TestNG.PositionCategoriesUnderHuman">
+    <configuration name="PositionCategoriesUnderHuman" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositionCategoriesUnderHuman.createPosition" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="createPosition" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositionCategoriesUnderHuman.createPositionNegative" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="createPositionNegative" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositionCategoriesUnderHuman.deleteNegative" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="deleteNegative" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositionCategoriesUnderHuman.positionUpdate" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="positionUpdate" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman" />
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.deleteNegative" />
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.positionUpdate" />
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPositionNegative" />
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPosition" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,18 +123,53 @@
       <option name="presentableId" value="Default" />
       <updated>1683038948871</updated>
     </task>
-    <task id="LOCAL-00001" summary="pom.xml güncellendi">
-      <created>1683052768644</created>
+    <task id="LOCAL-00001" summary="1-Create Login And Setup functions&#10;2- Create a Position Categoria">
+      <created>1683090113705</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1683052768644</updated>
+      <updated>1683090113705</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="3- Create Position Categoria Negative Test">
+      <created>1683091108521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683091108521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="4- Update Position Categoria Test">
+      <created>1683092542556</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683092542556</updated>
+    </task>
+    <task id="LOCAL-00004" summary="5- Delete Position Categoria Test">
+      <created>1683092841395</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683092841395</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pom.xml güncellendi" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom.xml güncellendi" />
+    <MESSAGE value="1-Create Login And Setup functions&#10;2- Create a Position Categoria" />
+    <MESSAGE value="3- Create Position Categoria Negative Test" />
+    <MESSAGE value="4- Update Position Categoria Test" />
+    <MESSAGE value="5- Delete Position Categoria Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="5- Delete Position Categoria Test" />
   </component>
 </project>
