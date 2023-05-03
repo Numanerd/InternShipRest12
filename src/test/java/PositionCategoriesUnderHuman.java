@@ -119,11 +119,38 @@ public class PositionCategoriesUnderHuman {
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message",containsString("already exists"))
-
-                ;
+                .body("message",containsString("already exists")) ;
 
 
+
+
+    }
+
+    @Test(dependsOnMethods = "createPositionNegative")
+    public void positionUpdate(){
+
+
+        Map<String,String>positionUpDate=new HashMap<>();
+        positionUpDate.put("id",positionID);
+        positionName=faker.name().fullName()+faker.number().digits(3);
+        positionUpDate.put("name",positionName);
+        positionUpDate.put("shortName",faker.name().firstName()+faker.number().digits(3));
+        positionUpDate.put("tenantId",faker.number().digits(24));
+
+
+        given()
+                .spec(requestSpec)
+
+                .body(positionUpDate)
+
+                .when()
+                .put("/school-service/api/employee-position")
+
+
+                .then()
+                .statusCode(200)
+                .log().body()
+                .body("name",equalTo(positionName)) ;
 
 
     }
