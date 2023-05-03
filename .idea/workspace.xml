@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="4- Update Position Categoria Test">
+    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="5- Delete Position Categoria Test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +80,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PositionCategoriesUnderHuman.deleteNegative" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
+      <option name="METHOD_NAME" value="deleteNegative" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PositionCategoriesUnderHuman.positionUpdate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="InternShipRest" />
       <option name="PACKAGE_NAME" value="" />
@@ -94,6 +107,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.PositionCategoriesUnderHuman" />
+        <item itemvalue="TestNG.PositionCategoriesUnderHuman.deleteNegative" />
         <item itemvalue="TestNG.PositionCategoriesUnderHuman.positionUpdate" />
         <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPositionNegative" />
         <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPosition" />
@@ -130,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683092542556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="5- Delete Position Categoria Test">
+      <created>1683092841395</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683092841395</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +169,7 @@
     <MESSAGE value="1-Create Login And Setup functions&#10;2- Create a Position Categoria" />
     <MESSAGE value="3- Create Position Categoria Negative Test" />
     <MESSAGE value="4- Update Position Categoria Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="4- Update Position Categoria Test" />
+    <MESSAGE value="5- Delete Position Categoria Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="5- Delete Position Categoria Test" />
   </component>
 </project>

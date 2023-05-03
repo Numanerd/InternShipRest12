@@ -175,7 +175,25 @@ public class PositionCategoriesUnderHuman {
 
     }
 
+    @Test(dependsOnMethods = "positionDelete")
+    public void deleteNegative(){
 
+        given()
+                .spec(requestSpec)
+               // .pathParam("positionID",positionID)
+                .log().uri()
+
+
+                .when()
+                .delete("/school-service/api/employee-position"+positionID)
+
+                .then()
+                .log().body()
+                .statusCode(404);
+
+
+
+    }
 
 }
 
