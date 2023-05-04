@@ -1,3 +1,4 @@
+
 import com.github.javafaker.Faker;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -12,15 +13,12 @@ import java.util.Map;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class GradeLevelsTest {
-
-    String gradeID;
-
-    String gradeName;
+public class BankAccounts {
 
     Faker faker = new Faker();
-
     RequestSpecification recSpec;
+    String bankAccountID;
+    String bankAccountIban;
 
     @BeforeClass
     public void Login() {
@@ -47,93 +45,91 @@ public class GradeLevelsTest {
                 .setContentType(ContentType.JSON)
                 .addCookies(cookies)
                 .build();
-
     }
 
     @Test
-    public void CreateGradeLevels() {
+    public void CreateBankAccount() {
 
-        Map<String, String> grade = new HashMap<>();
-        gradeName = faker.artist().name() + faker.name().firstName();
-        grade.put("name", gradeName);
-        grade.put("shortName", faker.name().lastName());
-        grade.put("order", faker.number().digit() + faker.number().randomDigitNotZero());
+        Map<String, String> accounts = new HashMap<>();
+        accounts.put("name", faker.name().fullName());
+        bankAccountIban = faker.number().randomDigit() + faker.idNumber().valid();
+        accounts.put("iban", bankAccountIban);
+        accounts.put("currency", "EUR");
+        accounts.put("schoolId", "6390f3207a3bcb6a7ac977f9");
 
-        gradeID =
+        bankAccountID =
                 given()
                         .spec(recSpec)
-                        .body(grade)
+                        .body(accounts)
                         .log().body()
 
                         .when()
-                        .post("school-service/api/grade-levels")
+                        .post("/school-service/api/bank-accounts")
 
                         .then()
-                        .log().body()
+                        .log().all()
                         .statusCode(201)
                         .extract().path("id")
         ;
-
     }
 
-    @Test(dependsOnMethods = "CreateGradeLevels")
-    public void CreateGradeLevelsNegative() {
+    @Test(dependsOnMethods = "CreateBankAccount")
+    public void CreateBankAccountNegative() {
 
-        Map<String, String> grade = new HashMap<>();
-        grade.put("name", gradeName);
-        grade.put("shortName", faker.name().firstName());
-        grade.put("order", faker.number().digit() + faker.number().randomDigitNotZero());
+        Map<String, String> accounts = new HashMap<>();
+        accounts.put("name", faker.name().fullName());
+        accounts.put("iban", bankAccountIban);
+        accounts.put("currency", "EUR");
+        accounts.put("schoolId", "6390f3207a3bcb6a7ac977f9");
 
         given()
                 .spec(recSpec)
-                .body(grade)
+                .body(accounts)
                 .log().body()
 
                 .when()
-                .post("school-service/api/grade-levels")
+                .post("/school-service/api/bank-accounts")
 
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message", containsString("already"))
+                .body("message", containsString("already exists"))
         ;
     }
 
-    @Test(dependsOnMethods = "CreateGradeLevelsNegative")
-    public void UpdateGradeLevel() {
+    @Test(dependsOnMethods = "CreateBankAccountNegative")
+    public void UpdateBankAccount() {
 
-        Map<String, String> grade = new HashMap<>();
-        grade.put("id", gradeID);
+        Map<String, String> accounts = new HashMap<>();
+        accounts.put("id", bankAccountID);
 
-        gradeName = faker.name().fullName() + faker.number().digits(4);
-        grade.put("name", gradeName);
-        grade.put("shortName", faker.name().lastName());
-        grade.put("order", faker.number().digit() + faker.number().randomDigitNotZero());
+        accounts.put("name", faker.name().fullName());
+        accounts.put("iban", bankAccountIban);
+        accounts.put("currency", "TRY");
+        accounts.put("schoolId", "6390f3207a3bcb6a7ac977f9");
 
         given()
                 .spec(recSpec)
-                .body(grade)
+                .body(accounts)
 
                 .when()
-                .put("school-service/api/grade-levels")
+                .put("/school-service/api/bank-accounts")
 
-                .then()
-                .log().body()
+                .then().log().body()
                 .statusCode(200)
-                .body("name", equalTo(gradeName))
+                .body("iban", equalTo(bankAccountIban))
         ;
     }
 
-    @Test(dependsOnMethods = "UpdateGradeLevel")
-    public void DeleteGradeLevel() {
+    @Test(dependsOnMethods = "UpdateBankAccount")
+    public void DeleteBankAccount() {
 
         given()
                 .spec(recSpec)
-                .pathParam("gradeID", gradeID)
                 .log().uri()
 
                 .when()
-                .delete("school-service/api/grade-levels/{gradeID}")
+                .delete("/school-service/api/bank-accounts/" + bankAccountID)
 
                 .then()
                 .log().body()
@@ -141,24 +137,20 @@ public class GradeLevelsTest {
         ;
     }
 
-    @Test(dependsOnMethods = "DeleteGradeLevel")
-    public void DeleteGradeLevelNegative() {
+    @Test(dependsOnMethods = "DeleteBankAccount")
+    public void DeleteBankAccountNegative() {
 
         given()
                 .spec(recSpec)
-                .pathParam("gradeID",gradeID)
-                .log().uri()
 
                 .when()
-                .delete("school-service/api/grade-levels/{gradeID}")
+                .delete("/school-service/api/bank-accounts/" + bankAccountID)
 
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message", equalTo("Grade Level not found."))
-                ;
-
-
+                .body("message", equalTo("Please, bank account must be exist"))
+        ;
     }
 
 }
