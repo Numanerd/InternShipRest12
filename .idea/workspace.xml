@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="workspace.xml güncellendi">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683138776144</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test">
+      <created>1683173160115</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683173160115</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +183,7 @@
     <MESSAGE value="4- Update Position Categoria Test" />
     <MESSAGE value="5- Delete Position Categoria Test" />
     <MESSAGE value="6- Delete Position  Categoria Negative Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="6- Delete Position  Categoria Negative Test" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
