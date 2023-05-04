@@ -54,7 +54,7 @@ public class GradeLevelsTest {
     public void CreateGradeLevels() {
 
         Map<String, String> grade = new HashMap<>();
-        gradeName = faker.artist().name();
+        gradeName = faker.artist().name() + faker.name().firstName();
         grade.put("name", gradeName);
         grade.put("shortName", faker.name().lastName());
         grade.put("order", faker.number().digit() + faker.number().randomDigitNotZero());
@@ -155,6 +155,7 @@ public class GradeLevelsTest {
                 .then()
                 .log().body()
                 .statusCode(400)
+                .body("message", equalTo("Can't find Grade Level"))
                 ;
 
 
