@@ -11,20 +11,25 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-public class Attestations {
+
+public class SubjectCategories {
+
+    Faker faker =new Faker();
     RequestSpecification requestSpec;
-    Faker faker=new Faker();
-    String attesName;
-    String forAttes;
+    String subjectName;
+    String subjectID;
+
+
+
     @BeforeClass
-    public void LoginPage(){
+    public void Login(){
         baseURI="https://test.mersys.io";
-        Map<String,String> login =new HashMap<>();
+        Map<String,String> login=new HashMap<>();
         login.put("username","turkeyts");
         login.put("password","TechnoStudy123");
         login.put("rememberMe","true");
 
-        Cookies cookies =
+        Cookies cookies=
                 given()
                         .contentType(ContentType.JSON)
                         .body(login)
@@ -32,7 +37,7 @@ public class Attestations {
                         .post("/auth/login")
                         .then()
                         .statusCode(200)
-                        .extract().response().detailedCookies();
+                        .extract().response().getDetailedCookies();
 
         requestSpec=new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
@@ -43,25 +48,21 @@ public class Attestations {
     }
 
     @Test
-    public void createAttestations(){
+    public void createSubject(){
 
-        Map<String,String> attes=new HashMap<>();
-        attesName=faker.name().firstName();
-        attes.put("name",attesName);
+        Map<String,String>subject=new HashMap<>();
+        subjectName=faker.name().firstName()+faker.number().digits(2);
+        subject.put("name",subjectName);
+        subject.put("code",faker.number().digits(4));
 
-        forAttes=
+
+        subjectID=
                 given()
                         .spec(requestSpec)
                         .log().body()
-                        .body(attes)
-
-
+                        .body(subject)
                         .when()
-
-
-                        .post("/school-service/api/attestation")
-
-
+                        .post("/school-service/api/subject-categories")
                         .then()
                         .statusCode(201)
                         .log().body()
@@ -70,87 +71,70 @@ public class Attestations {
 
 
     }
+    @Test(dependsOnMethods = "createSubject")
+    public void createSubjectNegative(){
 
-    @Test(dependsOnMethods = "createAttestations")
-    public void createAttestationsNegative(){
-        Map<String,String>attesNeg=new HashMap<>();
-        attesNeg.put("name",attesName);
-
+        Map<String,String>subjectNeg=new HashMap<>();
+        subjectNeg.put("name",subjectName);
+        subjectNeg.put("code",faker.number().digits(4));
 
         given()
                 .spec(requestSpec)
                 .log().body()
-                .body(attesNeg)
-
-
+                .body(subjectNeg)
                 .when()
-                .post("/school-service/api/attestation")
-
-
+                .post("/school-service/api/subject-categories")
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message",containsString("already exists."));
+                .body("message",containsString("already exists"));
 
     }
+    @Test(dependsOnMethods = "createSubjectNegative")
+    public void updateSubject(){
 
-    @Test(dependsOnMethods = "createAttestationsNegative")
-    public void updateAttestations(){
-
-        Map<String,String>upAttes=new HashMap<>();
-        upAttes.put("id",forAttes);
-        attesName=faker.name().fullName();
-        upAttes.put("name",attesName);
-
-
+        Map<String,String>updatesub=new HashMap<>();
+        updatesub.put("id",subjectID);
+        subjectName=faker.name().fullName()+faker.number().digits(2);
+        updatesub.put("name",subjectName);
+        updatesub.put("code",faker.number().digits(4));
 
         given()
                 .spec(requestSpec)
-                .body(upAttes)
+                .body(updatesub)
                 .when()
-
-
-                .put("/school-service/api/attestation")
-
+                .put("/school-service/api/subject-categories")
                 .then()
                 .statusCode(200)
                 .log().body()
-                .body("name",equalTo(attesName));
+                .body("name",equalTo(subjectName));
 
     }
 
-
-    @Test(dependsOnMethods = "updateAttestations")
-    public void deleteAttestations(){
+    @Test(dependsOnMethods = "updateSubject")
+    public void deleteSubject(){
 
         given()
                 .spec(requestSpec)
-
                 .when()
-                .delete("/school-service/api/attestation/"+forAttes)
+                .delete("/school-service/api/subject-categories/"+subjectID)
                 .then()
-                .statusCode(204)
+                .statusCode(200)
                 .log().body();
 
     }
 
-    @Test(dependsOnMethods = "deleteAttestations" )
-    public void deleteAttestationsNegative(){
+    @Test(dependsOnMethods = "deleteSubject")
+    public void deleteSubjectNegative(){
 
         given()
                 .spec(requestSpec)
-
-
-
                 .when()
-                .delete("/school-service/api/attestation/"+forAttes)
+                .delete("/school-service/api/subject-categories/"+subjectID)
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message",equalTo("attestation not found"));
-
+                .body("message",equalTo("SubjectCategory not  found"));
     }
-
-
 
 }
