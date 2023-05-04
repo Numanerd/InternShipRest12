@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="5- Delete Position Categoria Test">
+    <list default="true" id="8586864e-bfb7-4bfc-abfc-18bf5180adb9" name="Changes" comment="workspace.xml güncellendi">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Attestations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PositionCategoriesUnderHuman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +38,60 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
+    &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="RunManager" selected="TestNG.PositionCategoriesUnderHuman">
+    <configuration name="Attestations" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Attestations" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Attestations.createAttestations" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Attestations" />
+      <option name="METHOD_NAME" value="createAttestations" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Attestations.createAttestationsNegative" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Attestations" />
+      <option name="METHOD_NAME" value="createAttestationsNegative" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Attestations.updateAttestations" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="InternShipRest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Attestations" />
+      <option name="METHOD_NAME" value="updateAttestations" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PositionCategoriesUnderHuman" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="InternShipRest" />
       <option name="PACKAGE_NAME" value="" />
@@ -56,61 +103,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionCategoriesUnderHuman.createPosition" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="InternShipRest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
-      <option name="METHOD_NAME" value="createPosition" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionCategoriesUnderHuman.createPositionNegative" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="InternShipRest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
-      <option name="METHOD_NAME" value="createPositionNegative" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionCategoriesUnderHuman.deleteNegative" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="InternShipRest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
-      <option name="METHOD_NAME" value="deleteNegative" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionCategoriesUnderHuman.positionUpdate" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="InternShipRest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PositionCategoriesUnderHuman" />
-      <option name="METHOD_NAME" value="positionUpdate" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.PositionCategoriesUnderHuman" />
-        <item itemvalue="TestNG.PositionCategoriesUnderHuman.deleteNegative" />
-        <item itemvalue="TestNG.PositionCategoriesUnderHuman.positionUpdate" />
-        <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPositionNegative" />
-        <item itemvalue="TestNG.PositionCategoriesUnderHuman.createPosition" />
+        <item itemvalue="TestNG.Attestations" />
+        <item itemvalue="TestNG.Attestations.updateAttestations" />
+        <item itemvalue="TestNG.Attestations.createAttestations" />
+        <item itemvalue="TestNG.Attestations.createAttestationsNegative" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683092841395</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6- Delete Position  Categoria Negative Test">
+      <created>1683138776144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683138776144</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +176,7 @@
     <MESSAGE value="3- Create Position Categoria Negative Test" />
     <MESSAGE value="4- Update Position Categoria Test" />
     <MESSAGE value="5- Delete Position Categoria Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="5- Delete Position Categoria Test" />
+    <MESSAGE value="6- Delete Position  Categoria Negative Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="6- Delete Position  Categoria Negative Test" />
   </component>
 </project>
