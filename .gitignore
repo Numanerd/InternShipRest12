@@ -8,7 +8,7 @@ target/
 .idea
 .idea/jarRepositories.xml
 .idea/compiler.xml
-.idea/workspace.xml
+/workspace.xml
 .idea/libraries/
 *.iws
 *.iml
