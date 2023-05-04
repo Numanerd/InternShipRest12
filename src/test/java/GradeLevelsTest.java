@@ -155,7 +155,7 @@ public class GradeLevelsTest {
                 .then()
                 .log().body()
                 .statusCode(400)
-                .body("message", equalTo("Can't find Grade Level"))
+                .body("message", equalTo("Grade Level not found."))
                 ;
 
 
