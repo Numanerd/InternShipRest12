@@ -51,3 +51,15 @@
 /target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
 /target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+# Default ignored files
+/shelf/
+/workspace.xml
+/.gitignore
+/compiler.xml
+/encodings.xml
+/jarRepositories.xml
+/misc.xml
+/modules.xml
+/uiDesigner.xml
+/vcs.xml
+/vcs.xml
