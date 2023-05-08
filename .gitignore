@@ -40,3 +40,12 @@
 /.idea/shelf/Uncommitted_changes_before_Update_at_3_05_2023_20_10_[Changes]/shelved.patch
 /.idea/shelf/Uncommitted_changes_before_Update_at_4_05_2023_08_30_[Changes]/shelved.patch
 /.idea/shelf/Uncommitted_changes_before_Update_at_4_05_2023_08_30_[Changes]1/shelved.patch
+/target/test-classes/BankAccounts.class
+/target/test-classes/DepartmentsUserStory.class
+/target/test-classes/Discounts.class
+/target/test-classes/Fields.class
+/target/test-classes/GradeLevels.class
+/target/test-classes/Nationalities.class
+/target/test-classes/PositionCategoriesUnderHuman.class
+/target/test-classes/PositonCategories.class
+/target/test-classes/SubjectCategories.class
