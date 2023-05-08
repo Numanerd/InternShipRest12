@@ -133,7 +133,7 @@ public class SubjectCategories {
                 .delete("/school-service/api/subject-categories/"+subjectID)
                 .then()
                 .log().body()
-                .statusCode(200)
+                .statusCode(400)
                 .body("message",equalTo("SubjectCategory not  found"));
     }
 
